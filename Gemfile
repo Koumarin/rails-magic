@@ -77,3 +77,7 @@ group :test do
   gem 'guard'
   gem 'guard-minitest'
 end
+
+gem "cssbundling-rails", "~> 1.2"
+
+gem "jsbundling-rails", "~> 1.1"
