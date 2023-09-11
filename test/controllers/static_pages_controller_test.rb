@@ -1,23 +1,27 @@
 require "test_helper"
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
-  test 'should get root' do
-    get root_url
+  test 'should get home' do
+    get root_path
     assert_response :success
+    assert_select 'title', 'Magic Deckbuilder'
   end
 
-  test "should get help" do
-    get help_url
+  test 'should get help' do
+    get help_path
     assert_response :success
+    assert_select 'title', 'Help | Magic Deckbuilder'
   end
 
   test 'should get about' do
-    get about_url
+    get about_path
     assert_response :success
+    assert_select 'title', 'About | Magic Deckbuilder'
   end
 
-  test "should get contact" do
-    get contact_url
+  test 'should get contact' do
+    get contact_path
     assert_response :success
+    assert_select 'title', 'Contact | Magic Deckbuilder'
   end
 end
